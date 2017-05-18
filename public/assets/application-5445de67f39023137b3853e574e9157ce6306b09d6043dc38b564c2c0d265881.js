@@ -1298,8 +1298,7 @@ Released under the MIT license
 }).call(this);
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-if (window.location.hash == "#_=_")
-  window.location.hash = "";
+;
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //

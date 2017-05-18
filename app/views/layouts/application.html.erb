@@ -6,6 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+    	(function() {
+    "use strict";
+    if (window.location && window.location.hash) {
+        if (window.location.hash === '#_=_') {
+            window.location.hash = '';
+            return;
+        }
+        var facebookFubarLoginHash = RegExp('_\=_', 'g');
+        window.location.hash = window.location.hash.replace(facebookFubarLoginHash,     '');
+    }
+}()); 
+    </script>
   </head>
 
   <body>

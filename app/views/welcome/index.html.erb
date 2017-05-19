@@ -1,5 +1,24 @@
-<%= link_to "Signout", destroy_user_session_path, method: :delete %>
+
 <div>
 
-	<%= current_user.name %>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <% if flash[:alert] %>
+          <div class="alert alert-error" style="text-align:center;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:alert] %></div>
+      <% end %>
+      <% if flash[:notice] %>
+          <div class="alert alert-success" style="text-align:center;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:notice] %>
+          </div>
+      <% end %>
+      <span>Вы вошли как: </span><span class="label label-success"><%= current_user.email %></span> - <%= link_to "Выход", destroy_user_session_path, method: :delete %>
+    </div>
+  </div>
 </div>

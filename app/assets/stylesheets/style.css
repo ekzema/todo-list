@@ -199,6 +199,8 @@ body{
 #error_explanation ul li{
     color: red;
 }
-
-
 /* END login page*/
+
+.newListButton{
+    font-weight: bold;
+}

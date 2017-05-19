@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @todolist.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @todolist.name %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @todolist.priority %>
+</p>
+
+<%= link_to 'Edit', edit_todolist_path(@todolist) %> |
+<%= link_to 'Back', todolists_path %>

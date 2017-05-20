@@ -1,7 +1,17 @@
+<% if @todolist.save %>
+  $('.todoErrorCreate').html(' ');
+  $('#modalCreateTodo').modal('hide');
+  $('form input[type=text]').val(' ');
+  $('form textarea').val(' ');
+  <% else %>
+  $('.todoErrorCreate').html("<div class='alert alert-danger'><strong>Ошибка: </strong><%= @todolist.errors.messages.values.join(', ') %></div>");
+<% end %>
 
 
-$("<%= escape_javascript(render('todolist0', :todo => @todolist)) %>").appendTo('#wrapTodol');
-$('form input[type=text]').val(' ');
-$('form textarea').val(' ');
+
+
+
+
+
 
 

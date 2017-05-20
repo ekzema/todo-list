@@ -6,6 +6,22 @@ body{
     background-size: contain;
 }
 
+.titlePage{
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.garageLogo{
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: normal;
+}
+
 /* BEGIN login page*/
 
 .login-body {
@@ -202,5 +218,60 @@ body{
 /* END login page*/
 
 .newListButton{
+    display: flex;
+    font-size: 18px;
     font-weight: bold;
+    margin: 0 auto;
+    background-image: -moz-linear-gradient(37% 0% -90deg, #5183be 0%, #375d9e 99%);
+    background-image: -webkit-gradient(linear, 37% 0%, 37% 100%, color-stop(0, #5183be), color-stop(0.99, #375d9e));
+    background-image: -webkit-linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+    background-image: -o-linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+    background-image: -ms-linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+    background-image: linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+}
+
+.newListButton:hover{
+    background-color: #428BCA;
+}
+
+.todoErrorCreate{
+    margin-top: 15px;
+    margin-bottom: -20px;
+    padding: 0 10px;
+}
+
+.parsley-custom-error-message{
+    color: red;
+    padding-top: 5px;
+}
+
+.mainContent{
+    margin-top: 30px;
+}
+
+.todoListResult{
+    margin-top: 30px;
+}
+
+.titleTodo{
+    position: relative;
+    height: 50px;
+    background-image: -moz-linear-gradient(37% 0% -90deg, #5183be 0%, #375d9e 99%);
+    background-image: -webkit-gradient(linear, 37% 0%, 37% 100%, color-stop(0, #5183be), color-stop(0.99, #375d9e));
+    background-image: -webkit-linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+    background-image: -o-linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+    background-image: -ms-linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+    background-image: linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
+}
+
+.titleTodo .customeCalendar{
+    padding: 0 15px;
+}
+
+.titleTodo span{
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
 }

@@ -13,4 +13,5 @@
 //= require jquery
 //= require rails-ujs
 //= require twitter/bootstrap
+//= require parsley
 //= require_tree .

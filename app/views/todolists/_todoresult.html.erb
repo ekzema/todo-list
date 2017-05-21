@@ -1,0 +1,11 @@
+<div class="todoListResult" id="todoId_<%= @todolist.id %>">
+  <div class="titleTodo">
+    <i class="fa fa-calendar fa-2x customeCalendar" aria-hidden="true"></i>
+    <span><%= @todolist.name  %></span>
+    <div class="righBar">
+      <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_todolist_path(@todolist), remote: true %>
+      <span>|</span>
+      <%= link_to '<i class="fa fa-trash"></i>'.html_safe, @todolist, data: { confirm: 'Вы уверены что хотите удалить эту запись?' }, remote: true, method: :delete %>
+    </div>
+  </div>
+</div>

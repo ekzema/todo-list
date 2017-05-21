@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :todolists
+  resources :todolists do
+    resources :tasks
+  end
+  resources :tasks do
+    put :sort, on: :collection
+    collection do
+      get 'check'
+    end
+  end
   get 'welcome/index'
   root 'welcome#index'
 

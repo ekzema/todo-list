@@ -6,6 +6,10 @@ body{
     background-size: contain;
 }
 
+.clear{
+    clear: both;
+}
+
 .titlePage{
     margin-top: 20px;
     text-align: center;
@@ -296,8 +300,119 @@ body{
     color: #859BB8;
 }
 
-.todoListResult:hover .righBar{
+.titleTodo:hover .righBar{
     visibility: visible;
+}
+
+.newTaskForm{
+    height: 50px;
+    background-color: #CECECE;
+}
+
+.newTaskForm{
+    line-height: 50px;
+    padding-right: 10px;
+}
+
+.labelTotaskInput{
+    height: 50px;
+    padding: 0 15px;
+    float: left;
+}
+
+.labelTotaskInput label{
+    margin: 0;
+    padding-top: 0;
+
+}
+
+.labelTotaskInput i{
+    line-height: 50px;
+    color: #5CB85C;
+}
+
+.input-group .fieldTask{
+    float: none;
+}
+
+.todoListResult ul{
+    list-style: none;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #e7ebea;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.todoListResult ul li{
+    line-height: 45px;
+   border-bottom: 1px solid #e7ebea;
+}
+
+.todoListResult ul li:last-child{
+    border-bottom: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.todoListResult ul li:hover{
+    background-color: #FCFED6;
+}
+
+.todoListResult ul li:hover .leftNavTask i{
+    visibility: visible;
+}
+
+.completeTask{
+    display: inline-block;
+    width: 45px;
+    border-right: 1px solid #EFDADF;
+}
+
+.titleTaskTable{
+    display: inline-block;
+    width: 620px;
+    border-left: 1px solid #EFDADF;
+    padding: 0 15px;
+}
+
+.todoListResult ul li .leftNavTask i{
+    visibility: hidden;
+    width: 25px;
+    color: #C7C7C5;
+    text-align: center;
+    border-left: 1px solid #C7C7C5;
+}
+
+.firstLink i{
+    border: none !important;
+}
+
+
+
+.leftNavTask{
+    display: inline-block;
+    border-left: 1px solid #e7ebea;
+}
+
+.check0{
+    color: silver;
+    border: 1px solid silver;
+    margin-left: 15px;
+}
+
+.check0:hover{
+    color: #5FBE5F;
+}
+
+.check1{
+    border: 1px solid silver;
+    margin-left: 15px;
+    color: #5FBE5F;
+}
+
+.check1:hover{
+    color: silver
 }
 
 

@@ -1,11 +1,39 @@
 <div class="todoListResult" id="todoId_<%= @todolist.id %>">
   <div class="titleTodo">
     <i class="fa fa-calendar fa-2x customeCalendar" aria-hidden="true"></i>
-    <span><%= @todolist.name  %></span>
+    <span><%= @todolist.name %></span>
     <div class="righBar">
       <%= link_to '<i class="fa fa-pencil"></i>'.html_safe, edit_todolist_path(@todolist), remote: true %>
       <span>|</span>
-      <%= link_to '<i class="fa fa-trash"></i>'.html_safe, @todolist, data: { confirm: 'Вы уверены что хотите удалить эту запись?' }, remote: true, method: :delete %>
+      <%= link_to '<i class="fa fa-trash"></i>'.html_safe, @todolist, data: {confirm: 'Вы уверены что хотите удалить эту запись?'}, remote: true, method: :delete %>
     </div>
   </div>
+  <div class="newTaskForm">
+    <%= form_for([@todolist, Task.new], remote: true, :html => {class: "form-inlin"}) do |f| %>
+        <div class="labelTotaskInput">
+          <label for="todo_lab_<%= @todolist.id %>"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></label>
+        </div>
+        <div class="input-group ">
+          <%= f.text_field :title, placeholder: 'Enter a name for the task', class: 'fieldTask form-control', id: "todo_lab_#{@todolist.id}" %>
+          <span class="input-group-btn">
+                        <%= f.submit 'Add task', class: 'btn btn-success' %>
+                     </span>
+        </div>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+  <ul id="todo_<%= @todolist.id %>">
+    <% @todolist.tasks.each do |task| %>
+        <li>
+          <span class="completeTask"><%= link_to "<i class='fa fa-check'></i>".html_safe, {:controller => 'tasks', :action => 'check', id: task.id}, remote: true, class: "check#{task.completed}" %></span>
+          <span class="titleTaskTable"><%= task.title %></span>
+          <div class="leftNavTask">
+            <a href="#" class="firstLink"><i class="fa fa-sort " aria-hidden="true"></i></a>
+            <%= link_to '<i class="fa fa-pencil "></i>'.html_safe, edit_task_path(task), remote: true %>
+            <%= link_to '<i class="fa fa-trash "></i>'.html_safe, task, remote: true, method: :delete %>
+          </div>
+        </li>
+
+    <% end %>
+  </ul>
 </div>

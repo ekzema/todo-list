@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  to_perfom: 1
+  priority: 1
+  completed: 1
+  todolist_id: MyString
+
+two:
+  name: MyString
+  to_perfom: 1
+  priority: 1
+  completed: 1
+  todolist_id: MyString

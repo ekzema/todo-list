@@ -22,13 +22,13 @@
     <% end %>
   </div>
   <div class="clear"></div>
-  <ul id="todo_<%= @todolist.id %>">
+  <ul id="todo_<%= @todolist.id %>" class="sortable">
     <% @todolist.tasks.each do |task| %>
-        <li>
+        <li id="taskLi<%= task.id %>" class="panelTr" data-id='<%= task.id%>' >
           <span class="completeTask"><%= link_to "<i class='fa fa-check'></i>".html_safe, {:controller => 'tasks', :action => 'check', id: task.id}, remote: true, class: "check#{task.completed}" %></span>
           <span class="titleTaskTable"><%= task.title %></span>
           <div class="leftNavTask">
-            <a href="#" class="firstLink"><i class="fa fa-sort " aria-hidden="true"></i></a>
+            <span class="firstLink handle"><i class="fa fa-sort " aria-hidden="true"></i></span>
             <%= link_to '<i class="fa fa-pencil "></i>'.html_safe, edit_task_path(task), remote: true %>
             <%= link_to '<i class="fa fa-trash "></i>'.html_safe, task, remote: true, method: :delete %>
           </div>

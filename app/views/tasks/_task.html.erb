@@ -1,8 +1,8 @@
-<li id="taskLi<%= @task.id %>">
+<li id="taskLi<%= @task.id %>" class="panelTr" data-id='<%= @task.id%>' >
   <span class="completeTask"><%= link_to "<i class='fa fa-check'></i>".html_safe, {:controller => 'tasks', :action => 'check', id: task.id}, remote: true, class: "check#{task.completed}" %></span>
-  <span class="titleTaskTable" id="taskTitle_<%= task.id %>"><%= task.title %></span>
+  <span class="titleTaskTable columnCheck<%=task.completed%>" id="taskTitle_<%= task.id %>"><%= task.title %></span>
   <div class="leftNavTask">
-    <a href="#" class="firstLink"><i class="fa fa-sort " aria-hidden="true"></i></a>
+    <span class="firstLink handle"><i class="fa fa-sort " aria-hidden="true"></i></span>
     <%= link_to '<i class="fa fa-pencil "></i>'.html_safe, edit_task_path(task), remote: true %>
     <%= link_to '<i class="fa fa-trash "></i>'.html_safe, task, data: {confirm: 'Вы уверены что хотите удалить эту запись?'}, remote: true, method: :delete %>
   </div>

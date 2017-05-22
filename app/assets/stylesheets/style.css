@@ -338,7 +338,7 @@ body{
 .todoListResult ul{
     list-style: none;
     padding: 0;
-    background-color: white;
+    background-color: rgba(255,255,255,0.3);
     border: 1px solid #e7ebea;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -347,6 +347,7 @@ body{
 .todoListResult ul li{
     line-height: 45px;
    border-bottom: 1px solid #e7ebea;
+    background-color: white;
 }
 
 .todoListResult ul li:last-child{
@@ -386,6 +387,7 @@ body{
 
 .firstLink i{
     border: none !important;
+    cursor: move;
 }
 
 
@@ -415,4 +417,21 @@ body{
     color: silver
 }
 
+/*BEGIN costumase datepicker*/
+.table-condensed td:hover, .table-condensed th:hover{
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
 
+.dow:hover, .datepicker-switch:hover{
+    background-color: white !important;
+    cursor: default !important;
+}
+
+/*END costumase datepicker*/
+
+.columnCheck1 {
+    text-decoration: line-through;
+    font-weight: normal;
+    color: #D0D0D0;
+}

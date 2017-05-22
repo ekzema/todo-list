@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :todolists do
+    put :sort, on: :collection
     resources :tasks
   end
   resources :tasks do

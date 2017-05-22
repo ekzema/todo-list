@@ -46,6 +46,13 @@ class TodolistsController < ApplicationController
     end
   end
 
+  def sort
+    params[:order].each do |key,value|
+      Todolist.find(value[:id]).update_attribute(:priority,value[:position])
+    end
+    head :ok
+  end
+
   # DELETE /todolists/1
   # DELETE /todolists/1.json
   def destroy

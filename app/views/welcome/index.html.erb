@@ -1,3 +1,12 @@
+<div class="container">
+  <div class="page-header">
+    <h1 style="position:relative;"><span class="label label-primary"><%= current_user.email %></span>
+      <%= link_to "<i class='fa fa-sign-out fa-lg'></i> Выйти".html_safe, destroy_user_session_path, method: :delete, class: "btn btn-danger", style: "right:10px; position: absolute;" %>
+
+    </h1>
+  </div>
+</div>
+
 <!-- BEGIN Modal new TODO list -->
 <div class="modal fade" id="modalCreateTodo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -18,9 +27,6 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div><span class="label label-success"><%= current_user.email %></span>
-        - <%= link_to "Выход", destroy_user_session_path, method: :delete %></div>
-
       <% if flash[:alert] %>
           <div class="alert alert-error" style="text-align:center;">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -52,12 +58,12 @@
                 </div>
               </div>
               <div class="newTaskForm">
-                <%= form_for([todo, Task.new], remote: true, :html => {class: "form-inlin"}) do |f| %>
+                <%= form_for([todo, Task.new], remote: true, :html => {class: 'form-inlin', 'data-parsley-validate' => true}) do |f| %>
                     <div class="labelTotaskInput">
                       <label for="todo_lab_<%= todo.id %>"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></label>
                     </div>
                     <div class="input-group ">
-                      <%= f.text_field :title, placeholder: 'Enter a name for the task', class: 'fieldTask form-control', id: "todo_lab_#{todo.id}" %>
+                      <%= f.text_field :title, placeholder: 'Enter a name for the task', class: 'fieldTask form-control', id: "todo_lab_#{todo.id}", 'data-parsley-required' => true, 'data-parsley-error-message' => false %>
                       <span class="input-group-btn">
                         <%= f.submit 'Add task', class: 'btn btn-success' %>
                      </span>
@@ -71,9 +77,9 @@
                       <span class="completeTask"><%= link_to "<i class='fa fa-check'></i>".html_safe, {:controller => 'tasks', :action => 'check', id: task.id}, remote: true, class: "check#{task.completed}" %></span>
                       <span class="titleTaskTable columnCheck<%=task.completed%>" id="taskTitle_<%= task.id %>"><%= task.title %></span>
                       <div class="leftNavTask">
-                      <span class="firstLink"><i class="fa fa-sort handle" aria-hidden="true"></i></span>
-                      <%= link_to '<i class="fa fa-pencil "></i>'.html_safe, edit_task_path(task), remote: true %>
-                      <%= link_to '<i class="fa fa-trash "></i>'.html_safe, task, data: {confirm: 'Вы уверены что хотите удалить эту запись?'}, remote: true, method: :delete %>
+                        <span class="firstLink"><i class="fa fa-sort handle" aria-hidden="true"></i></span>
+                        <%= link_to '<i class="fa fa-pencil "></i>'.html_safe, edit_task_path(task), remote: true %>
+                        <%= link_to '<i class="fa fa-trash "></i>'.html_safe, task, data: {confirm: 'Вы уверены что хотите удалить эту запись?'}, remote: true, method: :delete %>
                       </div>
                     </li>
                 <% end %>

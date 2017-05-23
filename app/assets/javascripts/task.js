@@ -72,6 +72,7 @@ ready = function(){
 }
 
 
+
 $(document).ready(ready);
 /**
  * if using turbolinks

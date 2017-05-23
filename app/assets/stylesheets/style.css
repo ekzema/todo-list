@@ -420,14 +420,8 @@ body{
 }
 
 /*BEGIN costumase datepicker*/
-.table-condensed td:hover, .table-condensed th:hover{
-    background-color: #EEEEEE;
-    cursor: pointer;
-}
-
-.dow:hover, .datepicker-switch:hover{
-    background-color: white !important;
-    cursor: default !important;
+.ui-datepicker{
+    z-index: 1051 !important;
 }
 
 /*END costumase datepicker*/
@@ -436,4 +430,12 @@ body{
     text-decoration: line-through;
     font-weight: normal;
     color: #D0D0D0;
+}
+
+.page-header{
+    border-color: #ACACAC;
+}
+
+.page-header h1{
+    font-size: 25px;
 }

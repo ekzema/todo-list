@@ -1,9 +1,9 @@
 <%= form_for(@task, remote: true, :html => {class: 'formTodo form-horizontal', 'data-parsley-validate' => true}) do |f| %>
     <div class="modal-body">
       <div class="form-group">
-        <%= f.label :title, 'Title', class: 'col-sm-2 control-label' %>
+        <%= f.label :title, 'Title:', class: 'col-sm-2 control-label' %>
         <div class="col-sm-10">
-          <%= f.text_field :title, class: 'form-control', 'data-parsley-required' => true, 'data-parsley-error-message' => 'Это поле не может быть пустым' %>
+          <%= f.text_field :title, class: 'form-control', 'data-parsley-required' => true, 'data-parsley-error-message' => 'This field can not be empty' %>
         </div>
       </div>
 
@@ -11,7 +11,7 @@
         <%= f.label :to_perform, 'Deadline:', class: 'col-sm-2 control-label' %>
         <div class="col-sm-10">
           <div class='input-group date' id='datetimepicker1'>
-            <%= f.text_field :to_perform, class: 'form-control', 'data-provide' => 'datepicker' %>
+            <%= f.text_field :to_perform, class: 'form-control datepickerTodo'%>
             <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -19,6 +19,12 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <%= f.label :comment, 'Comment:', class: 'col-sm-2 control-label' %>
+        <div class="col-sm-10">
+          <%= f.text_area :comment, class: 'form-control datepickerTodo', rows: 4%>
+        </div>
+      </div>
     </div>
 
     <div class="modal-footer">
@@ -26,3 +32,17 @@
       <%= f.submit "Update task", class: "btn btn-primary", id: 'createTodoM' %>
     </div>
 <% end %>
+<script>
+    $( function() {
+        $( ".datepickerTodo" ).datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd-mm-yy',
+            minDate: 'dateToday'
+        });
+    } );
+
+    $( function() {
+      $('.formTodo').parsley();
+    } );
+</script>

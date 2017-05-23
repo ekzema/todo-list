@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(version: 20170521010226) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "title"
-    t.datetime "to_perform"
+    t.text "comment"
+    t.date "to_perform"
     t.integer "completed", default: 0
     t.integer "priority"
     t.string "todolist_id"

@@ -1,14 +1,20 @@
 <%= form_for(@todolist, remote: true, :html => {class: 'formTodo form-horizontal', 'data-parsley-validate' => true}) do |f| %>
     <div class="modal-body">
       <div class="form-group">
-        <%= f.label 'Название:', class: 'col-sm-2 control-label' %>
+        <%= f.label 'Title:', class: 'col-sm-2 control-label' %>
         <div class="col-sm-10">
-          <%= f.text_field :name, placeholder: 'Enter a name for the todo', class: 'form-control', 'data-parsley-required' => true, 'data-parsley-error-message' => 'Это поле не может быть пустым' %>
+          <%= f.text_field :name, placeholder: 'Enter a name for the todo', class: 'form-control', 'data-parsley-required' => true, 'data-parsley-error-message' => 'This field can not be empty' %>
         </div>
       </div>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <%= f.submit "Save Todo", class: "btn btn-primary", id: 'createTodoM', "onclick" => "save()" %>
+      <%= f.submit "Save Todo", class: "btn btn-primary", id: 'createTodoM' %>
     </div>
 <% end %>
+
+<script type="text/javascript" charset="utf-8">
+    $( function() {
+        $('.formTodo').parsley();
+    } );
+</script>

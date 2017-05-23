@@ -9,12 +9,12 @@
     </div>
   </div>
   <div class="newTaskForm">
-    <%= form_for([@todolist, Task.new], remote: true, :html => {class: "form-inlin"}) do |f| %>
+    <%= form_for([@todolist, Task.new], remote: true, :html => {class: "form-inlin formTodo", 'data-parsley-validate' => true}) do |f| %>
         <div class="labelTotaskInput">
           <label for="todo_lab_<%= @todolist.id %>"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></label>
         </div>
         <div class="input-group ">
-          <%= f.text_field :title, placeholder: 'Enter a name for the task', class: 'fieldTask form-control', id: "todo_lab_#{@todolist.id}" %>
+          <%= f.text_field :title, placeholder: 'Enter a name for the task', class: 'fieldTask form-control', id: "todo_lab_#{@todolist.id}", 'data-parsley-required' => true, 'data-parsley-error-message' => false %>
           <span class="input-group-btn">
                         <%= f.submit 'Add task', class: 'btn btn-success' %>
                      </span>
@@ -37,3 +37,9 @@
     <% end %>
   </ul>
 </div>
+
+<script type="text/javascript" charset="utf-8">
+    $( function() {
+        $('.formTodo').parsley();
+    } );
+</script>

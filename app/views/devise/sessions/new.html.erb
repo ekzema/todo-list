@@ -17,10 +17,8 @@
       </label>
       <%= f.submit "Войти", class: 'btn btn-primary btn-lg btn-block' %>
       <%= link_to "Войти через Facebook", user_facebook_omniauth_authorize_path, class: 'btn btn-primary btn-lg btn-block', style: 'color: white !important;' %>
-      <% if Rails.env == 'development' %>
           <%= link_to new_user_registration_path, class: 'btn btn-info btn-lg btn-block rootReg' do %>
               <span>Регистрация</span>
-          <% end %>
       <% end %>
     </div>
 

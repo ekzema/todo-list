@@ -49,6 +49,11 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
+group :test do
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_girl_rails'
+end
+
 group :development do
 	gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

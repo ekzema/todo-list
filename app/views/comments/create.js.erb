@@ -1,0 +1,2 @@
+$("<%= escape_javascript(render('resultcomment', :comment => @comment)) %>").fadeIn(1000).appendTo('#commentTask_<%="#{@comment.task.id}"%>');$('form textarea').val(' ');
+

@@ -33,10 +33,10 @@ RSpec.configure do |config|
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryGirl::Syntax::Methods
 
-  # For Devise <= 4.1.0
-  config.include Devise::Test::ControllerHelpers, :type => :controller
-  # Use the following instead if you are on Devise >= 4.1.1
-  # config.include Devise::TestHelpers, :type => :controller
+# For Devise <= 4.1.0
+  #config.include Devise::Test::ControllerHelpers, :type => :controller
+# Use the following instead if you are on Devise >= 4.1.1
+  config.include Devise::TestHelpers, :type => :controller
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false

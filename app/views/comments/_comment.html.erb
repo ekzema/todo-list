@@ -1,0 +1,50 @@
+<div class="modal fade" id="modalComment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Comment list</h4>
+      </div>
+      <div class="todoErrorCreate"></div>
+      <div class="modal-body">
+        <div class="form-group">
+          <%= form_for(Comment.new, remote: true, :html => {class: 'form-horizontal', 'data-parsley-validate' => true}) do |f| %>
+              <%= f.hidden_field :task_id, :value => @task.id %>
+              <div class="col-sm-12">
+                <%= f.text_area :body, class: 'form-control', 'data-parsley-required' => true, 'data-parsley-error-message' => 'This field can not be empty' %>
+              </div>
+              <div class="col-sm-12">
+                <%= f.submit "Add comment", class: "btn btn-success btn-xs col-sm-12 btnComment"%>
+
+              </div>
+              </div>
+          <% end %>
+<div class="row">
+          <div class="col-sm-12" id="commentTask_<%= @task.id %>">
+            <% @task.comments.each do |comment| %>
+              <%= render 'comments/resultcomment', :comment => comment %>
+            <% end %>
+          </div>
+          </div>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(function () {
+        $(".datepickerTodo").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: 'dd-mm-yy',
+            minDate: 'dateToday'
+        });
+    });
+
+    $(function () {
+        $('.formTodo').parsley();
+    });
+</script>

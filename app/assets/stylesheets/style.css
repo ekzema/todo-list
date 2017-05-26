@@ -374,7 +374,7 @@ body{
 
 .titleTaskTable{
     display: inline-block;
-    width: 620px;
+    width: 600px;
     border-left: 1px solid #EFDADF;
     padding: 0 15px;
 }
@@ -438,4 +438,31 @@ body{
 
 .page-header h1{
     font-size: 25px;
+}
+
+.btnComment{
+    margin-top: 5px;
+}
+
+.commenResult{
+    position: relative;
+    border-bottom: 1px solid #e7ebea;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.commenResult:hover span{
+    visibility: visible;
+}
+
+.commenResult:last-child{
+    border-bottom: none;
+}
+
+.commenResult span{
+    visibility: hidden;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }

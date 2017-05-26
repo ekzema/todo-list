@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170525222103) do
+ActiveRecord::Schema.define(version: 20170526131043) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
     t.integer "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "uploader_file_name"
+    t.string "uploader_content_type"
+    t.integer "uploader_file_size"
+    t.datetime "uploader_updated_at"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -36,6 +40,17 @@ ActiveRecord::Schema.define(version: 20170525222103) do
     t.integer "priority"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "uploaders", force: :cascade do |t|
+    t.integer "comment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "commentfile_file_name"
+    t.string "commentfile_content_type"
+    t.integer "commentfile_file_size"
+    t.datetime "commentfile_updated_at"
+    t.index ["comment_id"], name: "index_uploaders_on_comment_id"
   end
 
   create_table "users", force: :cascade do |t|

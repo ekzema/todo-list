@@ -1,6 +1,18 @@
 <p class="commenResult" id="comm_<%= comment.id %>">
   <%= comment.body %>
   <span>
-                    <%= link_to '<i class="fa fa-trash "></i>'.html_safe, comment, data: {confirm: 'Вы уверены что хотите удалить этот комментарий?'}, remote: true, method: :delete %>
-                  </span>
+  <%= link_to '<i class="fa fa-trash "></i>'.html_safe, comment, data: {confirm: 'Вы уверены что хотите удалить этот комментарий?'}, remote: true, method: :delete %>
+   <%= form_for Uploader.new, html: { multipart: true, remote: true, class: 'formUploader' } do |f| %>
+   <%= f.hidden_field :comment_id, :value => comment.id %>
+  <%= f.file_field :commentfile, class: 'inputUpload' %>
+
+<% end %>
+  </span>
 </p>
+
+<script>
+
+
+
+
+</script>

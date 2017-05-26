@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'uploaders/create'
+  resources :uploaders
   resources :comments
   resources :todolists do
     put :sort, on: :collection

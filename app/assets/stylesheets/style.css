@@ -1,4 +1,4 @@
-body{
+body {
     background: url("/g_1.jpg") repeat-x fixed;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -6,11 +6,11 @@ body{
     background-size: contain;
 }
 
-.clear{
+.clear {
     clear: both;
 }
 
-.titlePage{
+.titlePage {
     margin-top: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -18,7 +18,7 @@ body{
     font-size: 30px;
 }
 
-.garageLogo{
+.garageLogo {
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -35,28 +35,33 @@ body{
 .login-form {
     max-width: 350px;
     margin: 200px auto 0;
-    background: rgba(213,215,222,0.6);
+    background: rgba(213, 215, 222, 0.6);
 }
-.login-img-body .login-form{
+
+.login-img-body .login-form {
     max-width: 350px;
     margin: 200px auto 0;
-    background: rgba(213,215,222,0.4);
+    background: rgba(213, 215, 222, 0.4);
     border: 1px solid #B0B6BE;
 }
-.login-img2-body .login-form{
+
+.login-img2-body .login-form {
     border: 1px solid #B0B6BE;
-    background: rgba(213,215,222,0.7);
+    background: rgba(213, 215, 222, 0.7);
 }
-.login-img3-body .login-form{
+
+.login-img3-body .login-form {
     border: 1px solid #B0B6BE;
-    background: rgba(213,215,222,0.9);
+    background: rgba(213, 215, 222, 0.9);
 }
-.login-form a{
+
+.login-form a {
     color: #688a7e !important;
 }
+
 .login-form h2.login-form-heading {
     margin: 0;
-    padding:20px 15px;
+    padding: 20px 15px;
     text-align: center;
     background: #34aadc;
     border-radius: 5px 5px 0 0;
@@ -72,16 +77,16 @@ body{
     margin-bottom: 14px;
     margin-left: 20px;
 }
+
 .login-form .checkbox {
     font-weight: normal;
     font-weight: 300;
     font-family: 'Lato', sans-serif;
 }
 
-.login-form .checkbox label{
+.login-form .checkbox label {
     padding-left: 0;
 }
-
 
 .login-form .form-control {
     position: relative;
@@ -92,17 +97,21 @@ body{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .login-form .form-control:focus {
     z-index: 2;
 }
-.login-form .login-img{
+
+.login-form .login-img {
     font-size: 50px;
     font-weight: 300;
 }
-.login-form .input-group{
+
+.login-form .input-group {
     padding-bottom: 15px;
 }
-.login-form .input-group-addon{
+
+.login-form .input-group-addon {
     padding: 6px 12px;
     font-size: 16px;
     color: #8b9199;
@@ -113,15 +122,18 @@ body{
     border: none;
     border-radius: 0;
 }
+
 .login-form input[type="text"], .login-form input[type="password"] {
     border: none;
     box-shadow: none;
     font-size: 16px;
     border-radius: 0;
 }
-.login-form .btn{
+
+.login-form .btn {
     border-radius: 0;
 }
+
 .login-form .btn-login {
     background: #f67a6e;
     color: #fff;
@@ -138,9 +150,11 @@ body{
     font-size: 16px;
     font-weight: 300;
 }
-.login-img3-body .login-form p,.login-img2-body .login-form p {
+
+.login-img3-body .login-form p, .login-img2-body .login-form p {
     color: #34aadc;
 }
+
 .login-form a {
     color: #b6b6b6;
 }
@@ -148,7 +162,8 @@ body{
 .login-form a:hover {
     color: #34aadc;
 }
-.form .required{
+
+.form .required {
     font-size: 16px;
     color: #00a0df;
 }
@@ -157,7 +172,7 @@ body{
     padding: 20px;
 }
 
-.login-social-link  {
+.login-social-link {
     display: inline-block;
     margin-top: 20px;
     margin-bottom: 15px;
@@ -182,24 +197,24 @@ body{
     background: #5193ea;
     margin-right: 22px;
     box-shadow: 0 4px #2775e2;
-    float:left;
+    float: left;
 }
 
 .login-social-link a.twitter {
     background: #44ccfe;
     box-shadow: 0 4px #2bb4e8;
-    float:left;
+    float: left;
 }
 
-#error_explanation{
+#error_explanation {
     max-width: 550px;
     margin: 20px auto;
     background-color: #b6b6b6;
-    padding: 0  15px 15px 15px;
+    padding: 0 15px 15px 15px;
     opacity: 0.7;
 }
 
-#error_explanation:before{
+#error_explanation:before {
     display: block;
     margin: 0 auto;
     width: 40px;
@@ -209,19 +224,20 @@ body{
     content: "\f06a";
 }
 
-#error_explanation h2{
+#error_explanation h2 {
     font-size: 20px;
     color: black;
     margin-top: 0;
     padding-top: 0;
 }
 
-#error_explanation ul li{
+#error_explanation ul li {
     color: red;
 }
+
 /* END login page*/
 
-.newListButton{
+.newListButton {
     display: flex;
     font-size: 18px;
     font-weight: bold;
@@ -234,30 +250,30 @@ body{
     background-image: linear-gradient(-90deg, #5183be 0%, #375d9e 99%);
 }
 
-.newListButton:hover{
+.newListButton:hover {
     background-color: #428BCA;
 }
 
-.todoErrorCreate{
+.todoErrorCreate {
     margin-top: 15px;
     margin-bottom: -20px;
     padding: 0 10px;
 }
 
-.parsley-custom-error-message{
+.parsley-custom-error-message {
     color: red;
     padding-top: 5px;
 }
 
-.mainContent{
+.mainContent {
     margin-top: 30px;
 }
 
-.todoListResult{
+.todoListResult {
     margin-top: 30px;
 }
 
-.titleTodo{
+.titleTodo {
     position: relative;
     height: 50px;
     background-image: -moz-linear-gradient(37% 0% -90deg, #5183be 0%, #375d9e 99%);
@@ -270,11 +286,11 @@ body{
     cursor: move;
 }
 
-.titleTodo .customeCalendar{
+.titleTodo .customeCalendar {
     padding: 0 15px;
 }
 
-.titleTodo span{
+.titleTodo span {
     line-height: 50px;
     font-size: 18px;
     font-weight: bold;
@@ -282,104 +298,104 @@ body{
     text-transform: capitalize;
 }
 
-.righBar{
+.righBar {
     visibility: hidden;
-        float: right;
+    float: right;
     display: inline-block;
     padding: 0 10px;
     cursor: default;
 }
 
-.righBar a{
+.righBar a {
     line-height: 50px;
     color: #A1BEE3;
     font-size: 18px;
 }
 
-.righBar span{
+.righBar span {
     margin: 0 5px;
     font-weight: normal;
     color: #859BB8;
 }
 
-.titleTodo:hover .righBar{
+.titleTodo:hover .righBar {
     visibility: visible;
 }
 
-.newTaskForm{
+.newTaskForm {
     height: 50px;
     background-color: #CECECE;
     outline: 1px solid #abafa3;
 }
 
-.newTaskForm{
+.newTaskForm {
     line-height: 50px;
     padding-right: 10px;
 }
 
-.labelTotaskInput{
+.labelTotaskInput {
     height: 50px;
     padding: 0 15px;
     float: left;
 }
 
-.labelTotaskInput label{
+.labelTotaskInput label {
+    display: inline;
     margin: 0;
     padding-top: 0;
-
 }
 
-.labelTotaskInput i{
+.labelTotaskInput i {
     line-height: 50px;
     color: #5CB85C;
 }
 
-.input-group .fieldTask{
+.input-group .fieldTask {
     float: none;
 }
 
-.todoListResult ul{
+.todoListResult ul {
     list-style: none;
     padding: 0;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.todoListResult ul li{
+.todoListResult ul li {
     line-height: 45px;
-   border-bottom: 1px solid #e7ebea;
+    border-bottom: 1px solid #e7ebea;
     background-color: white;
 }
 
-.todoListResult ul li:last-child{
+.todoListResult ul li:last-child {
     border-bottom: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.todoListResult ul li:hover{
+.todoListResult ul li:hover {
     background-color: #FCFED6;
 }
 
-.todoListResult ul li:hover .leftNavTask i{
+.todoListResult ul li:hover .leftNavTask i {
     visibility: visible;
 }
 
-.completeTask{
+.completeTask {
     display: inline-block;
     width: 45px;
     border-right: 1px solid #EFDADF;
 }
 
-.titleTaskTable{
+.titleTaskTable {
     display: inline-block;
     width: 600px;
     border-left: 1px solid #EFDADF;
     padding: 0 15px;
 }
 
-.todoListResult ul li .leftNavTask i{
+.todoListResult ul li .leftNavTask i {
     visibility: hidden;
     width: 25px;
     color: #C7C7C5;
@@ -387,40 +403,38 @@ body{
     border-left: 1px solid #C7C7C5;
 }
 
-.firstLink i{
+.firstLink i {
     border: none !important;
     cursor: move;
 }
 
-
-
-.leftNavTask{
+.leftNavTask {
     display: inline-block;
     border-left: 1px solid #e7ebea;
 }
 
-.check0{
+.check0 {
     color: silver;
     border: 1px solid silver;
     margin-left: 15px;
 }
 
-.check0:hover{
+.check0:hover {
     color: #5FBE5F;
 }
 
-.check1{
+.check1 {
     border: 1px solid silver;
     margin-left: 15px;
     color: #5FBE5F;
 }
 
-.check1:hover{
+.check1:hover {
     color: silver
 }
 
 /*BEGIN costumase datepicker*/
-.ui-datepicker{
+.ui-datepicker {
     z-index: 1051 !important;
 }
 
@@ -432,37 +446,93 @@ body{
     color: #D0D0D0;
 }
 
-.page-header{
+.page-header {
     border-color: #ACACAC;
 }
 
-.page-header h1{
+.page-header h1 {
     font-size: 25px;
 }
 
-.btnComment{
-    margin-top: 5px;
+.btnComment {
+    margin: 5px 0 15px 0;
 }
 
-.commenResult{
+.formFile {
     position: relative;
-    border-bottom: 1px solid #e7ebea;
-    padding: 10px;
-    margin-top: 10px;
+    border-bottomp: 1px solid #e7ebea;
+    border-top: 1px solid #e7ebea;
+    padding: 23px 10px 10px 10px;
+
 }
 
-.commenResult:hover span{
-    visibility: visible;
-}
-
-.commenResult:last-child{
-    border-bottom: none;
-}
-
-.commenResult span{
+.commenResult span {
     visibility: hidden;
     display: inline-block;
     position: absolute;
+    top: 3px;
+}
+
+.commenResult span:first-child {
     right: 5px;
-    top: 5px;
+}
+
+.commenResult span:last-child {
+    right: 20px;
+}
+
+.formFile .labelFileUpload i {
+    border-right: 1px solid silver;
+    padding-right: 5px;
+
+}
+.labelFileUpload{
+    cursor: pointer;
+
+}
+
+
+
+.commenResult i:first-child {
+    padding-left: 5px;
+}
+
+.formFile:hover span {
+    visibility: visible;
+}
+
+.hideIn {
+    position: absolute;
+    top: 0;
+    width: 515px;
+    height: 25px;
+    z-index: 2;
+}
+
+.formFile .inputUpload {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.formFile:hover .labelFileUpload {
+    visibility: visible;
+}
+
+.formFile i {
+    color: #C7C7C5;
+}
+
+.footerComment {
+    border-bottom: 5px;
+    right: 5px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.footerComment li {
+    display: inline-block;
 }

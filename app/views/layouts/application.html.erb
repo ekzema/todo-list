@@ -3,15 +3,21 @@
   <head>
     <title>TodoList</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js" integrity="sha384-tIwI8+qJdZBtYYCKwRkjxBGQVZS3gGozr3CtI+5JF/oL1JmPEHzCEnIKbDbLTCer" crossorigin="anonymous"></script>
+
     <script type="text/javascript">
 if (window.location.href.indexOf('#_=_') > 0) {
 
 window.location = window.location.href.replace(/#.*/, '');
 
 }
+$(document).on( "change", ".inputUpload", function() {
+    var id_input = $(this).attr('id_input');
+    $('.formUploader_'+id_input).ajaxSubmit();
+});
+
     </script>
   </head>
 

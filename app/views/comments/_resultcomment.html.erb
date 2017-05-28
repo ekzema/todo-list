@@ -1,18 +1,25 @@
-<p class="commenResult" id="comm_<%= comment.id %>">
-  <%= comment.body %>
-  <span>
+<div id="mainResultComment_<%= comment.id %>">
+<%= form_for Uploader.new, html: {multipart: true, remote: true, class: "formFile formUploader_#{comment.id}"} do |f| %>
+<div class="hideIn"></div>
+    <p class="commenResult" id="comm_<%= comment.id %>">
+      <%= comment.body %>
+      <span>
   <%= link_to '<i class="fa fa-trash "></i>'.html_safe, comment, data: {confirm: 'Вы уверены что хотите удалить этот комментарий?'}, remote: true, method: :delete %>
-   <%= form_for Uploader.new, html: { multipart: true, remote: true, class: 'formUploader' } do |f| %>
+</span>
+      <span id="<%= comment.id %>">
    <%= f.hidden_field :comment_id, :value => comment.id %>
-  <%= f.file_field :commentfile, class: 'inputUpload' %>
+        <%= f.label :commentfile, '<i class="fa fa-paperclip" aria-hidden="true"></i>'.html_safe, class: 'labelFileUpload' %>
+        <%= f.file_field :commentfile, class: 'inputUpload', id_input: comment.id %>
+</span>
+    </p>
 
 <% end %>
-  </span>
-</p>
 
-<script>
+<ul class="footerComment" id="linkFile_<%= comment.id %>">
+  <% comment.uploaders.each do |uploader| %>
+      <li><%= render 'uploaders/links', :uploader => uploader %></li>
+  <% end %>
+</ul>
 
 
-
-
-</script>
+</div>

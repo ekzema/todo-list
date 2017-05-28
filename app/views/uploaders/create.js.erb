@@ -1,1 +1,1 @@
-alert('test');
+$("<%= escape_javascript(render('links', :uploader => @uploader)) %>").fadeIn(1000).appendTo('#linkFile_<%="#{@uploader.comment.id}"%>');

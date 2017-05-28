@@ -27,7 +27,7 @@ gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'russian', '~> 0.6.0'
 gem 'parsley-rails', '~> 2.7'
-gem 'paperclip', '~> 5.1'
+gem "paperclip", "~> 3.5.3"
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

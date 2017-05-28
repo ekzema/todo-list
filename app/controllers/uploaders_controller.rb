@@ -1,7 +1,7 @@
 class UploadersController < ApplicationController
 before_action :authenticate_user!
   def create      
-      @fileupload = Uploader.create(uploader_params)
+      @uploader= Uploader.create(uploader_params)
     respond_to do |format|
       format.js
     end

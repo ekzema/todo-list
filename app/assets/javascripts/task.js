@@ -73,6 +73,21 @@ ready = function(){
 
 
 
+$(document).on( "change", ".inputUpload", function() {  
+    var id_input = $(this).attr('id_input');
+    $("<img class='loadinfFile' src='loading.gif' alt='loading'>").appendTo('#linkFile_'+id_input);
+    $('.formUploader_'+id_input).ajaxSubmit({
+        clearForm: true,
+        resetForm: true,
+        dataType: 'script'
+    });
+});
+
+ function removeComment(remove_id) {  
+    $("<div class='remComm'><img src='removing.gif' alt='Removing'></div>").appendTo('#mainResultComment_'+remove_id);   
+    $('#mainResultComment_'+remove_id).css("color", "silver");
+   }
+
 $(document).ready(ready);
 /**
  * if using turbolinks

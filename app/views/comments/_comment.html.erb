@@ -9,7 +9,7 @@
       <div class="todoErrorCreate"></div>
       <div class="modal-body">
         <div class="form-group">
-          <%= form_for(Comment.new, remote: true, :html => {class: 'form-horizontal', 'data-parsley-validate' => true}) do |f| %>
+          <%= form_for(Comment.new, remote: true, :html => {class: 'form-horizontal formCommentText', 'data-parsley-validate' => true}) do |f| %>
               <%= f.hidden_field :task_id, :value => @task.id %>
               <div class="col-sm-12">
                 <%= f.text_area :body, class: 'form-control', 'data-parsley-required' => true, 'data-parsley-error-message' => 'This field can not be empty' %>
@@ -33,4 +33,8 @@
     </div>
   </div>
 </div>
-
+<script type="text/javascript" charset="utf-8">
+    $( function() {
+        $('.formCommentText').parsley();
+    } );
+</script>

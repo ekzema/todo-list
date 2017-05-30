@@ -511,7 +511,7 @@ body {
 
 .formFile .inputUpload {
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 0;
     z-index: 1;
     opacity: 0;
@@ -536,3 +536,21 @@ body {
 .footerComment li {
     display: inline-block;
 }
+
+.mainResultComment{
+    position: relative;
+}
+
+.remComm{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+.remComm img{
+    display: flex;
+    margin: auto;
+}
+

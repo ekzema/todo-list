@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ekzemacloud
+  api_key: '512254134344991'
+  api_secret: JXiEX2b6rNvNq8Sg_PFk0JKjulY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ekzemacloud
+  api_key: '512254134344991'
+  api_secret: JXiEX2b6rNvNq8Sg_PFk0JKjulY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ekzemacloud
+  api_key: '512254134344991'
+  api_secret: JXiEX2b6rNvNq8Sg_PFk0JKjulY
+  enhance_image_tag: true
+  static_image_support: false

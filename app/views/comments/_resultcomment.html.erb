@@ -1,10 +1,10 @@
-<div id="mainResultComment_<%= comment.id %>">
+<div class='mainResultComment' id="mainResultComment_<%= comment.id %>">
 <%= form_for Uploader.new, html: {multipart: true, remote: true, class: "formFile formUploader_#{comment.id}"} do |f| %>
 <div class="hideIn"></div>
     <p class="commenResult" id="comm_<%= comment.id %>">
       <%= comment.body %>
       <span>
-  <%= link_to '<i class="fa fa-trash "></i>'.html_safe, comment, data: {confirm: 'Вы уверены что хотите удалить этот комментарий?'}, remote: true, method: :delete %>
+  <%= link_to '<i class="fa fa-trash "></i>'.html_safe, comment, class: 'removeComment', remote: true, method: :delete, onclick: "removeComment(#{comment.id})" %>
 </span>
       <span id="<%= comment.id %>">
    <%= f.hidden_field :comment_id, :value => comment.id %>
@@ -20,6 +20,4 @@
       <li><%= render 'uploaders/links', :uploader => uploader %></li>
   <% end %>
 </ul>
-
-
 </div>

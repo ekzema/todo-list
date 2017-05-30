@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
   	@todolist = Todolist.new
     @task = Task.new
   end
+
+  def users
+  	@users = User.all
+  end
 end

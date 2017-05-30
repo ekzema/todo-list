@@ -13,13 +13,9 @@ if (window.location.href.indexOf('#_=_') > 0) {
 window.location = window.location.href.replace(/#.*/, '');
 
 }
-$(document).on( "change", ".inputUpload", function() {
-    var id_input = $(this).attr('id_input');
-    $('.formUploader_'+id_input).ajaxSubmit();
-});
-
+  
     </script>
-  </head>
+  </head> 
 
   <body>
     <%= yield %>
